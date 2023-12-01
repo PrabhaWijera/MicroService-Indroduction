@@ -37,7 +37,7 @@ public class UserContrller {
 
     @GetMapping(path = "/saveIT")
     public String get_Items(){
-        return restTemplate.getForObject("http://localhost:8082/api/api/v1/item/saveIT",String.class);
+        return restTemplate.getForObject("http://localhost:8082/api/api/v1/item/saveIT",String.class);// url and rerturn type but post ekdi url,type,return type dnn oni
     }
 
     @GetMapping(path="/CusfromTSave")
