@@ -40,5 +40,15 @@ public class UserContrller {
         return restTemplate.getForObject("http://localhost:8082/api/api/v1/item/saveIT",String.class);
     }
 
+    @GetMapping(path="/CusfromTSave")
+    public String fromCus_Item(){
+        return itemFiegn.fromCus_Item();
+    }
+
+    @PostMapping(path = "/saveCusITM", consumes = MediaType.APPLICATION_JSON_VALUE,produces = MediaType.APPLICATION_JSON_VALUE)
+    public UserDto saveItemFromCus(@RequestBody UserDto userDto){
+        return itemFiegn.saveItemFromCus(userDto);
+    }
+
 
 }
